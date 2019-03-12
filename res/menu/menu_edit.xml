@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/m_salvar"
+        android:title="Salvar" />
+    <item
+        android:id="@+id/m_excluir"
+        android:title="Excluir"
+        android:visible="false" />
+    <item
+        android:id="@+id/m_limpar"
+        android:title="Limpar"/>
+    <item
+        android:id="@+id/m_cancelar"
+        android:title="Cancelar"/>
+    <item
+        android:id="@+id/m_voltar"
+        android:title="Voltar"
+        android:visible="false" />
+    <item
+        android:id="@+id/m_exportar"
+        android:title="Exportar"
+        android:visible="false" />
+</menu>

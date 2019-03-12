@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_consulta_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/light_green"
+    tools:context="br.com.alexandrebarboza.consultoriomedico.ConsultaEditActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/text_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@android:style/TextAppearance.Medium"
+        android:background="@drawable/lb_touchable"
+        android:textAlignment="center"
+        android:layout_marginBottom="15dp"
+        android:text="[data]" />
+
+    <LinearLayout
+        android:id="@+id/layout_horario_consulta"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="top|center"
+        android:weightSum="1">
+
+        <TextView
+            android:id="@+id/text_hora_inicio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:gravity="end"
+            android:text="De: " />
+
+        <EditText
+            android:id="@+id/edit_horas_inicio"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:maxLength="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:gravity="center_horizontal"
+            android:text=" : " />
+
+        <EditText
+            android:id="@+id/edit_minutos_inicio"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:maxLength="2" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/text_hora_fim"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:gravity="end"
+            android:text=" Até: " />
+
+        <EditText
+            android:id="@+id/edit_horas_fim"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:maxLength="2" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="@android:style/TextAppearance.Medium"
+            android:gravity="center_horizontal"
+            android:text=" : " />
+
+        <EditText
+            android:id="@+id/edit_minutos_fim"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:background="@drawable/edit_default_white"
+            android:elevation="6dp"
+            android:maxLength="2" />
+
+    </LinearLayout>
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/scroll_layout_consulta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/inner_layout_consulta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/text_medico_consulta"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="6dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text="@string/str_medico" />
+
+            <LinearLayout
+                android:id="@+id/inner_medico_consulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_medico_consulta"
+                    android:layout_width="168dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp" />
+
+                <ImageButton
+                    android:id="@+id/button_procurar_medico_consulta"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="left|top"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_especialidade_consulta"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="6dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text="@string/str_especialidade" />
+
+            <LinearLayout
+                android:id="@+id/inner_especialidade_consulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_especialidade_consulta"
+                    android:layout_width="168dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp" />
+
+                <ImageButton
+                    android:id="@+id/button_procurar_especialidade_consulta"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="left|top"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_paciente_consulta"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="6dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text="@string/str_paciente" />
+
+            <LinearLayout
+                android:id="@+id/inner_paciente_consulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_paciente_consulta"
+                    android:layout_width="168dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp" />
+
+                <ImageButton
+                    android:id="@+id/button_procurar_paciente_consulta"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="left|top"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_convenio_consulta"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|bottom"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="6dp"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:text="@string/str_convenio" />
+
+            <LinearLayout
+                android:id="@+id/inner_convenio_consulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_convenio_consulta"
+                    android:layout_width="168dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp" />
+
+                <ImageButton
+                    android:id="@+id/button_procurar_convenio_consulta"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="left|bottom"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/text_sala_consulta"
+                android:layout_width="168dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:layout_gravity="center|bottom"
+                android:paddingLeft="20dp"
+                android:layout_marginBottom="6dp"
+                android:text="@string/str_sala" />
+
+            <LinearLayout
+                android:id="@+id/inner_sala_consulta"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_sala_consulta"
+                    android:layout_width="168dp"
+                    android:layout_height="25dp"
+                    android:layout_margin="5dp"
+                    android:layout_gravity="right|bottom"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp" />
+
+                <ImageButton
+                    android:id="@+id/button_procurar_sala_consulta"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_gravity="left|bottom"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

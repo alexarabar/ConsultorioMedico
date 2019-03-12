@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_height="40dp"
+        android:id="@+id/text_cor_medico"
+        android:textAppearance="@android:style/TextAppearance.Large"
+         android:layout_width="40dp"
+         android:textColor="@android:color/white"
+         android:text = "#"
+         android:textStyle="bold"
+         android:typeface="serif"
+         android:textAlignment="center"
+         android:gravity="center_vertical"
+         android:background="@android:color/black"/>
+
+    <LinearLayout
+      android:orientation="vertical"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content">
+
+        <TextView
+          android:text="Nome"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:id="@+id/text_nome_medico"
+          android:textAppearance="?android:attr/textAppearanceMedium"
+          android:textColor="@android:color/black" />
+
+        <LinearLayout
+          android:orientation="horizontal"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content">
+
+            <TextView
+              android:text="CRM:"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/text_label_crm_medico"
+              android:textStyle="bold"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="@android:color/black" />
+
+            <TextView
+              android:text="99999"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_marginLeft="5dp"
+              android:id="@+id/text_crm_medico"
+              android:textStyle="bold"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textColor="@android:color/black" />
+
+            <TextView
+              android:text=" - "
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/text_label_uf_medico"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textStyle="bold"
+              android:textColor="@android:color/black" />
+
+            <TextView
+              android:text="XX"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:id="@+id/text_uf_medicos"
+              android:textAppearance="?android:attr/textAppearanceSmall"
+              android:textStyle="bold"
+              android:textColor="@android:color/black" />
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

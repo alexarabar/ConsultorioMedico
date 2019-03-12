@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_paciente_edit"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@color/light_green"
+    tools:context="br.com.alexandrebarboza.consultoriomedico.PacienteEditActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_green"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layout_nome_paciente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_nome_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/str_nome"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <EditText
+                android:id="@+id/edit_nome_paciente2"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:maxLength="45"
+                android:textColor="@color/black" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layout_cpf_paciente"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_cpf_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="45dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/str_cpf"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <EditText
+                android:id="@+id/edit_cpf_paciente"
+                android:layout_width="165dp"
+                android:layout_height="25dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:ems="10"
+                android:inputType="number"
+                android:textAppearance="@android:style/TextAppearance.Medium"
+                android:maxLength="11"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/label_convenio_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="@string/str_convenio"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <EditText
+                android:id="@+id/edit_convenio_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/edit_default_white"
+                android:elevation="6dp"
+                android:ems="10"
+                android:inputType="text"
+                android:textAppearance="@android:style/TextAppearance.Medium" />
+
+            <ImageButton
+                android:id="@+id/button_procurar_convenio_paciente"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:elevation="3dp"
+                android:background="@drawable/bt_operation"
+                app:srcCompat="@android:drawable/ic_menu_search" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="30dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_telefone_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/str_telefone"
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <LinearLayout
+                android:id="@+id/layout_telefone2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_telefone_paciente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/button_adicionar_telefone_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    android:src="@drawable/ic_insert" />
+
+                <ImageButton
+                    android:id="@+id/button_alterar_telefone_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    android:enabled="false"
+                    android:src="@drawable/ic_update_disabled" />
+
+                <ImageButton
+                    android:id="@+id/button_excluir_telefone_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="5dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    android:enabled="false"
+                    android:src="@drawable/ic_delete_disabled" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_email_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/str_email"
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <LinearLayout
+                android:id="@+id/layout_email2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_email_paciente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/button_adicionar_email_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    android:src="@drawable/ic_insert" />
+
+                <ImageButton
+                    android:id="@+id/button_alterar_email_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    android:enabled="false"
+                    android:src="@drawable/ic_update_disabled" />
+
+                <ImageButton
+                    android:id="@+id/button_excluir_email_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="5dp"
+                    android:elevation="3dp"
+                    android:background="@drawable/bt_operation"
+                    android:enabled="false"
+                    android:src="@drawable/ic_delete_disabled" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/label_endereco_paciente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="2.5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="0dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:text="@string/str_endereco"
+                android:textColor="@color/black"
+                android:textAppearance="@android:style/TextAppearance.Small" />
+
+            <LinearLayout
+                android:id="@+id/layout_endereco2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <Spinner
+                    android:id="@+id/spinner_endereco_paciente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/edit_default_white"
+                    android:elevation="6dp"
+                    android:layout_weight="1" />
+
+                <ImageButton
+                    android:id="@+id/button_adicionar_endereco_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="2.5dp"
+                    android:background="@drawable/bt_operation"
+                    android:elevation="3dp"
+                    android:src="@drawable/ic_insert" />
+
+                <ImageButton
+                    android:id="@+id/button_alterar_endereco_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="2.55dp"
+                    android:background="@drawable/bt_operation"
+                    android:enabled="false"
+                    android:elevation="3dp"
+                    android:src="@drawable/ic_update_disabled" />
+
+                <ImageButton
+                    android:id="@+id/button_excluir_endereco_paciente"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="0dp"
+                    android:layout_marginBottom="7.5dp"
+                    android:layout_marginLeft="2.5dp"
+                    android:layout_marginRight="5dp"
+                    android:background="@drawable/bt_operation"
+                    android:enabled="false"
+                    android:elevation="3dp"
+                    android:src="@drawable/ic_delete_disabled" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
